@@ -1,0 +1,217 @@
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    cursor: pointer;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: var(--primary);
+    /*color: var(--light);*/
+    font-size: 1.2rem;
+    list-style: none;
+    text-align: center !important;
+    text-transform: uppercase;
+    /* box-shadow: var(--shadow); */
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    z-index: 3;
+    /* background-color: var(--light); */
+    /* box-shadow: var(--shadow); */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: block !important;
+    position: relative !important;
+    font-size: 1.0rem !important;
+    text-align: center !important;
+    color: black;
+    padding: 2px 6px;
+    margin-left: 0 !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    /* background: var(--dark); */
+    /* color: var(--light) !important; */
+    font-size: 1.5rem !important;
+    color: red;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content{
+    text-align: center !important;
+    position: sticky !important;
+    display: block !important;
+
+    /* background: var(--dark); */
+    /* color: var(--light); */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    /* background: var(--light); */
+    color: red;
+    font-weight: bolder;
+    font-size: 1.65rem;
+    text-align: center !important;
+}
+
+
+.icon{
+    height:5em;
+    width:5em;
+    display:inline-flex;
+    align-self:center;
+    position: relative;
+    bottom: 0.45em;
+    margin-right:0.25em
+}
+
+.icon:hover {
+  height:7rem;
+  width:7rem;
+  fill:red;
+}
+
+.icon2:hover {
+  height:48px;
+  width:48px;
+}
+
+.overlay {
+  background: var(--primary);
+  /*color: var(--light);*/
+  opacity: 1.0;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /*background-color:black;*/
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  /*font-size: 36px;
+  color: #818181;*/
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  /*color: #f1f1f1;*/
+  color: red;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  font-size: 60px;
+}
+
+.nav-mobile {
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.nav-mobile:hover {
+  color:red;
+}
+
+.contact {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact:hover {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+
+.nav-mobile:hover {
+  color:#0afe85;
+}
+
+  a:hover {
+    color: #0afe85 !important;
+  }
+  .overlay {
+    background: var(--dark);
+  }
+
+  .dropdown {
+    background: var(--dark);
+  }
+
+  .dropbtn {
+    background: var(--dark);
+  }
+
+    .dropdown-content a {
+      background: var(--dark);
+      color: white !important;
+    }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    /*background: var(--dark);
+        /* color: var(--light) !important; */
+        /*color: red !important;*/
+    color: #0afe85 !important;
+    }
+
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background: var(--dark);
+        color: #0afe85 !important;
+  /*      filter:invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+        font-weight: bolder;
+        font-size: 1.65rem;
+    }
+
+    .icon{
+    height:5em;
+    width:5em;
+    display:inline-flex;
+    align-self:center;
+    position: relative;
+    bottom: 0.45em;
+    margin-right:0.25em;
+    fill:white;
+    }
+
+.icon:hover {
+  height:7em;
+  width:7em;
+  filter:invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+    .contact {
+        color: white;
+    }
+}
